@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="line mb-0"></div>
+<section class="logo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'home/img/home_free1.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/img/home_free2.jpeg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="line no-m"></div>
+<section class="promo">
+    <div class="text-center">
+        <div class="name-section">
+            <h2 class="text-center">Преимущества</h2>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-money-bill red"></i>
+                    <div class="text-promo">
+                        <p><b>Гарантия</b></p>
+                        <p>Гарантия на несколько лет</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-shield-halved red"></i>
+                    <div class="text-promo">
+                        <p><b>Гарантия</b></p>
+                        <p>Гарантия на несколько лет</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-screwdriver-wrench red"></i>
+                    <div class="text-promo">
+                        <p><b>Техника</b></p>
+                        <p>Лучшая импортная техника</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5 text-adaptive">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-check red"></i>
+                    <div class="text-promo">
+                        <p><b>Надежность</b></p>
+                        <p>Мы давно на рынке</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-bars-progress red"></i>
+                    <div class="text-promo">
+                        <p><b>Обратная связь</b></p>
+                        <p>Мы постоянно на связе</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-suitcase red"></i>
+                    <div class="text-promo">
+                        <p><b>Опыт</b></p>
+                        <p>У нас множество законченых проектов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-gauge red"></i>
+                    <div class="text-promo">
+                        <p><b>Скорость</b></p>
+                        <p>Сделаем ваш проект очень быстро</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-12 text-center mb-5">
+                <div class="flex-center flex flex-row">
+                    <i class="fa-solid fa-bomb red"></i>
+                    <div class="text-promo">
+                        <p><b>Работники</b></p>
+                        <p>Квалифицированные специалисты</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="stroitel-page">
+    <div class="text-center">
+        <div class="name-section">
+            <h2 class="text-center">Этапы строительства</h2>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="accordion accordion-box-shadow" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button my-color-accordion" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Подготовка и планирование
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Этот этап включает все необходимые подготовительные действия перед началом
+                                строительства. В первую очередь, проводится анализ участка: учитываются его
+                                геологические особенности, возможность подключения к коммуникациям, доступность
+                                подъездных путей. Далее разрабатывается проект дома с учетом пожеланий заказчика,
+                                планируются расходы и сроки выполнения. Составляется смета, подготавливаются необходимые
+                                документы, включая разрешение на строительство.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed my-color-accordion" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Земляные работы и устройство фундамента
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                На этом этапе осуществляется расчистка участка от растительности и ненужных объектов.
+                                Далее проводятся земляные работы, такие как рытье котлована и траншей под фундамент. В
+                                зависимости от выбранного типа фундамента (ленточный, свайный, плитный),
+                                подготавливается основание. Особое внимание уделяется гидроизоляции и утеплению
+                                фундамента для повышения долговечности и энергоэффективности будущего дома.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed my-color-accordion" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Возведение стен и устройство перекрытий
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Этот этап включает строительство основных несущих конструкций. Вначале возводятся стены,
+                                которые могут быть кирпичными, бетонными или выполнены из других материалов, в
+                                зависимости от проекта. Далее устанавливаются межэтажные перекрытия, обеспечивающие
+                                жесткость конструкции. На этом этапе закладываются проемы для окон и дверей, а также
+                                элементы для крепления инженерных коммуникаций.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed my-color-accordion" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Монтаж кровли
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Строительство крыши включает монтаж стропильной системы, укладку кровельного материала,
+                                а также установку водосточной системы. Кровельные работы важны для защиты дома от
+                                внешних воздействий: осадков, ветра и температурных колебаний. В зависимости от
+                                климатических условий и архитектуры дома подбирается наиболее подходящий тип крыши и
+                                материал, такие как металлочерепица, профнастил или мягкая кровля. Особое внимание
+                                уделяется тепло- и гидроизоляции кровли.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed my-color-accordion" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Проведение инженерных коммуникаций
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                На этом этапе монтируются все необходимые инженерные сети и коммуникации: электричество,
+                                отопление, водоснабжение и канализация. Для каждого вида коммуникаций составляются
+                                проекты и схемы, обеспечивающие их правильное и безопасное расположение. Также
+                                производится установка оборудования, необходимого для функционирования инженерных
+                                систем, и подключение к центральным или автономным источникам энергии и воды.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed my-color-accordion" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Отделочные работы и сдача дома
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Завершающий этап строительства включает внутренние и внешние отделочные работы. Внутри
+                                дома проводится штукатурка и покраска стен, укладка полов, монтаж межкомнатных дверей и
+                                сантехники. Снаружи выполняется облицовка фасада и благоустройство прилегающей
+                                территории. После выполнения всех работ объект проходит проверку на соответствие
+                                стандартам качества и безопасности, проводится финальная уборка, после чего дом готов к
+                                заселению и эксплуатации.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="reviews">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center text-uppercase color2 mb-5">Отзывы</h2>
+            <div class="col-lg-4 col-sm-12">
+                <div class="text-center reviews-background mb-3"><img src="{% static 'home/img/reviews/Rayan.jfif' %}"
+                                                                      class="reviews-img img-fluid img-thumbnail mb-2"
+                                                                      alt="">
+                    <p class="reviews-text p-1">Мы заказали строительство дома под ключ, и, честно говоря, не ожидали,
+                        что всё пройдет настолько легко и без проблем! Команда строителей взяла на себя все заботы – от
+                        проектирования до мелочей в отделке. Все этапы шли четко по плану, каждый сотрудник был вежливым
+                        и профессиональным, что очень нас порадовало.
+                    </p>
+                    <div class="line w-25"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="text-center center-views reviews-background mb-3"><img
+                        src="{% static 'home/img/reviews/sigma.jfif' %}" class="reviews-img img-fluid img-thumbnail"
+                        alt="">
+                    <p class="reviews-text p-1">Мы остались очень довольны результатом строительства нашего дома! На
+                        каждом этапе работ чувствовался профессионализм и ответственное отношение к делу. Все началось с
+                        качественного планирования: нас внимательно выслушали, учли все пожелания и предложили
+                        оптимальные варианты. На этапе земляных работ и устройства фундамента команда проявила высокий
+                        уровень организации и четко следовала проекту. Мы сразу поняли, что наш дом строят на
+                        совесть.</p>
+                    <div class="line w-25"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="text-center reviews-background mb-3"><img src="{% static 'home/img/reviews/Maks.jfif' %}"
+                                                                      class="reviews-img img-fluid img-thumbnail"
+                                                                      alt="">
+                    <p class="reviews-text p-1">Мы давно мечтали о своем доме, и выбор компании для строительства стал
+                        очень важным решением. С первых же встреч с бригадой строителей мы поняли, что сделали
+                        правильный выбор! Все сотрудники были внимательны к нашим пожеланиям, и на каждом этапе шли
+                        навстречу. Процесс строительства прошел гладко, работы выполнялись вовремя, а команда всегда
+                        держала нас в курсе по каждому этапу.</p>
+                    <div class="line w-25"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="why-us">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center text-uppercase color2 mb-5">Почему мы?</h2>
+            <div class="col-lg-3 col-sm-12 text-center mb-5">
+                <img src="{% static 'home/img/home-be.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-9 col-sm-12 p-3">
+                <h4 class="text-uppercase mb-2"><b>Бик-монтаж</b></h4>
+                <p>Выбрав нашу компанию, вы доверяете строительство профессионалам, для которых важен каждый этап – от
+                    планирования до финальной отделки. Мы придерживаемся высоких стандартов качества, используя надежные
+                    материалы и проверенные технологии, чтобы ваш дом был долговечным и комфортным. Индивидуальный
+                    подход к
+                    каждому клиенту позволяет нам создавать проекты, полностью соответствующие вашим ожиданиям.
+                    Строительство под ключ с нашей командой – это спокойствие и уверенность в том, что ваш дом будет
+                    построен на совесть и с душой.
+                </p>
+                <p>
+                    Наша компания – это команда специалистов, которая превращает мечты о собственном доме в реальность.
+                    Мы сопровождаем вас на каждом этапе, начиная с разработки проекта и заканчивая сдачей дома под ключ.
+                    Основное наше преимущество – это опыт и знания, которые мы используем, чтобы создать качественное и
+                    безопасное жилье, соответствующее всем стандартам и требованиям.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

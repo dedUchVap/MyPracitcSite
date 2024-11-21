@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<section class="profile login-page text-center flex flex-center">
+<form class="form-applications" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h3><b>Заявка на строительство</b></h3>
+    <p class="invalid">{{form.errors}}</p>
+    <p class="w-50">Здесь вы можете оставить заявку, и выбрать удобный формат связи, с вами свяжуться в течении дня</p>
+    {{form.smeta_path}}
+    <label class="file-upload-custom" for="smeta" id="file-name">Выбор файла (Смета)</label>
+    {{form.number_phones}}
+    {{form.communication_method}}
+    <div class="checkbox-container-applications"><input type="checkbox"><div class="m-l-3 text-start">Согласен на обработку персональных данных</div></div>
+    <button class="btn btn-login mb-3 w-50" type="submit">Отправить заявку</button>
+</form>
+</section>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="login-page">
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="" method="post" class="text-center form-login">
+                {% csrf_token %}
+                <h1>Вход</h1>
+                {% if messages %}
+                    {% for m in messages %}
+                <p class="invalid">{{m}}</p>
+                {% endfor %}
+                {% endif %}
+                {{form.errors}}
+                {{form.non_field_errors}}
+                {{form.username}}
+                {{form.password}}
+                {{form.captcha_my}}
+                <button class="btn btn-login" type="submit">Войти</button>
+                <a href="{% url 'login' %}">Регистрация</a>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+</body>
+{% endblock %}

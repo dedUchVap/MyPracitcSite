@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="login-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="{% url 'register'%}" method="post" class="text-center form-login" id="form-register">
+                    {% csrf_token %}
+                    <h1>Регистрация</h1>
+                    <p class="text-danger">{{ form.non_field_errors }}</p>
+                    <p class="text-danger" id="error_list">{{ form.errors }}</p>
+                    {{form_one.username}}
+                    {{form_one.password1}}
+                    {{form_one.password2}}
+                    {{form_one.email}}
+                    <button class="btn btn-login" type="submit" id="#register_button">Далее</button>
+                    <a href="{% url 'login' %}">Вход</a>
+                </form>
+                <form id="form-register-two" hidden="hidden" class="text-center form-login">
+                    <h5>На почту был направлен код подтверждения, для регистрации, введите его</h5>
+                    {% csrf_token %}
+                    {{form_two.code}}
+                    <p class="text-danger">{{ form_two.non_field_errors }}</p>
+                    <p class="text-danger" id="error_list_two">{{ form_two.errors }}</p>
+                    <button class="btn btn-login" type="submit" id="#register_button_two">Далее</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+{% endblock %}

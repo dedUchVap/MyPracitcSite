@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
+
+</head>
+
+<body>
+<section class="absolute_reg">
+    <div class="bar">
+        <div class="pc">
+            {% for m in menu %}
+            <a href="{% url m.url_name %}">
+                {{m.title}}
+            </a>
+            {% endfor %}
+        </div>
+        <div class="user" id="bar"><i class="fa-solid fa-list"></i></div>
+    </div>
+    <ul class="user_bar" id="bar-user">
+        {% for m in menu %}
+        <a href="{% url m.url_name %}">
+            <li>{{m.title}}</li>
+        </a>
+        {% endfor %}
+    </ul>
+</section>
+<main class="flex-1">
+{% block content%}
+
+{% endblock %}
+</main>
+<footer class="footer p-2">
+    <div class="text-center">
+        <p class="text-adaptive p-2">@ Все права защищены. Копирование материалов сайта без разрешения запрещено. <br>
+            Тексты, изображения и иные элементы
+            контента охраняются законом об авторских правах. <br> При использовании материалов ссылка на источник
+            обязательна.</p>
+        <div class="line mb-3 back-color w-adaptive"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 text-center col-sm-12">
+                <div class="text-adaptive">
+                    <div class="red">АДРЕС:</div>
+                    <p>
+                        Ростовская область, <br>
+                        Город Батайск, <br> Ул Максима Горького, <br> дом 6, офис 3-4
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'home/js/jquery.js'%}"></script>
+<script src="{% static 'home/js/bootstrap.bundle.min.js' %}"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/2562e85bf4.js" crossorigin="anonymous"></script>
+<script>const submit_url = '{% url "submit_register" %}'
+        const code_url = '{% url "code" %}'
+        const login_url = '{% url "login"%}'</script>
+<script src="{% static 'home/js/scripts.js'%}">
+</script>
+</body>
+</html>
